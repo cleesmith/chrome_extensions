@@ -1,0 +1,28 @@
+{
+    "manifest_version": 3,
+    "name": "CaptureOpenAI",
+    "description": "Export ChatGPT conversations to text files",
+    "version": "1.0",
+    "permissions": [
+        "activeTab",
+        "scripting"
+    ],
+    "host_permissions": [
+        "https://chatgpt.com/*"
+    ],
+    "action": {
+        "default_icon": {
+            "16": "images/icon16.png",
+            "48": "images/icon48.png",
+            "128": "images/icon128.png"
+        }
+    },
+    "icons": {
+        "16": "images/icon16.png",
+        "48": "images/icon48.png",
+        "128": "images/icon128.png"
+    },
+    "background": {
+        "service_worker": "background.js"
+    }
+}
