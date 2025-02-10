@@ -17,7 +17,7 @@ lists, and spacing.
 • It identifies messages from both the user and AI, marks them as 
 "ME:" or "AI" respectively. 
 
-• The extension also captures references to any **Artifacts/Canvas**
+• The extension also captures references to any **Artifact** or **Canvas**
 created during the chat, but **not their contents**.
 
 • The code includes several specialized functions that work together:
