@@ -1,6 +1,6 @@
 # chrome_extensions
 
-## No more clicking all of thse Copy buttons then pasting; endlessly repeated
+## No more clicking all of those Copy buttons then pasting; endlessly repeated
 
 So I coded two Chrome extensions to capture plain text from chat
 sessions with ChatGPT and/or Claude.
