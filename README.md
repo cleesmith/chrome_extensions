@@ -18,7 +18,7 @@ lists, and spacing.
 "ME:" or "AI" respectively. 
 
 • The extension also captures references to any **Artifact** or **Canvas**
-created during the chat, but **not their contents** because their content is in another window (perhaps a future enhancement?).
+created during the chat, but **not their contents** because their content is in another window (*perhaps a future enhancement?*).
 
 • The code includes several specialized functions that work together:
 - A DOM processor that maintains layout and formatting
