@@ -1,8 +1,41 @@
 # chrome_extensions
- Two Chrome extensions to copy text from chat sessions with ChatGPT and/or Claude
- These extensions only work at these hardcoded URL's:
- 1. https://claude.ai/chat/ for **CapClaudeChat** *see: CapClaudeChat/background.js*
- 2. https://chatgpt.com/c/ for **CaptureOpenAI** *see: CaptureOpenAI/background.js*
+
+## No more clicking all of thse Copy buttons then pasting; endlessly repeated
+
+So I coded two Chrome extensions to capture plain text from chat sessions with ChatGPT and/or Claude.
+
+Here's a summary of this JavaScript code for your README:
+
+This Chrome extension exports ChatGPT or Claude AI chat conversations to plain
+text files. When run, it processes the chat page and
+creates a downloadable text file containing the full conversation.
+
+Key features:
+
+The extension preserves the conversation structure and formatting by
+intelligently handling different types of content like paragraphs,
+lists, and spacing. 
+
+It identifies messages from both the user and AI, marks them as "ME:"
+or "AI" respectively. 
+
+The extension also captures references to any **Artifacts/Canvas**
+created during the chat, but **not their contents**.
+
+The code includes several specialized functions that work together:
+- A DOM processor that maintains layout and formatting
+- A message extractor that identifies and captures chat content
+- A Markdown cleaner that removes formatting syntax
+- A formatter that structures the conversation into a readable text file
+
+This tool is particularly useful for users who want to save, archive,
+or analyze their conversations with ChatGPT/Claude in a clean,
+readable **plain text** format.
+
+
+These extensions only work at these hardcoded URL's:
+1. https://claude.ai/chat/ for **CapClaudeChat** *see: CapClaudeChat/background.js*
+2. https://chatgpt.com/c/ for **CaptureOpenAI** *see: CaptureOpenAI/background.js*
 
 ---
 
