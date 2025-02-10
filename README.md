@@ -14,7 +14,7 @@ Key features:<br>
 intelligently handling different types of content like paragraphs,
 lists, and spacing. 
 
-• It identifies messages from both the user and AI, marks them as 
+• It identifies messages from both you and the AI, marks them as 
 "ME:" or "AI" respectively. 
 
 • The extension also captures references to any **Artifact** or **Canvas**
