@@ -9,17 +9,14 @@ The Chrome extensions export ChatGPT or Claude AI chat conversations to plain
 text files. When run, it processes the entire chat page/session and
 creates a downloadable text file containing the full conversation.
 
-Key features:
+Key features:<br>
 • The extension preserves the conversation structure and formatting by
 intelligently handling different types of content like paragraphs,
 lists, and spacing. 
-
 • It identifies messages from both the user and AI, marks them as 
 "ME:" or "AI" respectively. 
-
 • The extension also captures references to any **Artifact** or **Canvas**
 created during the chat, but **not their contents** because their content is in another window (*perhaps a future enhancement?*).
-
 • The code includes several specialized functions that work together:
 - A DOM processor that maintains layout and formatting
 - A message extractor that identifies and captures chat content
