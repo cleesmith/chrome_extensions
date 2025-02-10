@@ -37,14 +37,13 @@ readable **plain text** format.
 
 ---
 
-Below are step‐by‐step instructions for installing **CapClaudeChat**
+## Below are step‐by‐step instructions for installing **CapClaudeChat**
 Chrome extension using the ZIP file download method (for users
 without Git). This guide also includes steps for pinning the
 extension to the toolbar.
 
----
 
-1. Download and Extract the ZIP File
+### Download and Extract the ZIP File
 
 • Download the ZIP File: 
 - Visit the GitHub repository page at https://github.com/cleesmith/chrome_extensions. 
@@ -61,7 +60,7 @@ extension to the toolbar.
 
 ---
 
-2. Install the Extension in Chrome
+### Install the Extension in Chrome
 
 • Open the Chrome Extensions Page: 
 - Open Google Chrome. 
@@ -82,7 +81,7 @@ extension to the toolbar.
 
 ---
 
-3. Pin the Extension to the Toolbar
+### Pin the Extension to the Toolbar
 
 • Open the Extensions Menu: 
 - Look to the right of the Chrome address bar for the Extensions icon
@@ -98,7 +97,7 @@ extension to the toolbar.
 
 ---
 
-Final Notes
+### Final Notes
 
 • Testing the Extension: 
 - After installation and pinning, click the CapClaudeChat icon on the
