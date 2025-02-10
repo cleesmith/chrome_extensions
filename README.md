@@ -32,8 +32,8 @@ readable **plain text** format.
 
 
 ### These extensions only work at these hardcoded URL's:
-1. https://claude.ai/chat/ for **CapClaudeChat** *see: CapClaudeChat/background.js*
-2. https://chatgpt.com/c/ for **CaptureOpenAI** *see: CaptureOpenAI/background.js*
+1. https://claude.ai/chat/ for **CapClaudeChat** - *see: CapClaudeChat/background.js*
+2. https://chatgpt.com/c/ for **CaptureOpenAI** - *see: CaptureOpenAI/background.js*
 
 ---
 
