@@ -83,7 +83,6 @@ https://developer.chrome.com/docs/extensions/mv3/getstarted/
 
 ---
 
-> Note: the above instructions also apply to **CaptureOpenAI** it's just in a different folder.
-> Also: **CaptureOpenAI** only works at: https://chatgpt.com/c/
+> Note: the above instructions also apply to **CaptureOpenAI** it's just in a different folder.<br>Also: **CaptureOpenAI** only works at: https://chatgpt.com/c/
 
 ---
