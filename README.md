@@ -47,9 +47,9 @@ extension to the toolbar.
 1. Download and Extract the ZIP File
 
 • Download the ZIP File: 
-- Visit your GitHub repository page at https://github.com/cleesmith/chrome_extensions. 
+- Visit the GitHub repository page at https://github.com/cleesmith/chrome_extensions. 
 - Click the green "Code" button. 
-- Choose "Download ZIP". This will download the entire repository as a ZIP file.
+- Choose "Download ZIP" - this will download the entire repository as a ZIP file.
 
 • Extract the ZIP File: 
 - Locate the downloaded ZIP file (typically in your Downloads folder). 
