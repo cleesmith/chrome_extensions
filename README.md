@@ -69,15 +69,13 @@ Final Notes
 • Testing the Extension: 
 - After installation and pinning, click the CapClaudeChat icon on the
   toolbar to confirm that the extension opens its intended popup.
+  This only works if you're at: https://claude.ai/chat/
 
 • Updating the Extension: 
 - If you make changes to the extension files in the folder, return to
   the Extensions page(chrome://extensions) and click the "Reload"
   button on the extension’s card to apply updates.
 
-These instructions should allow non-Git users to install your
-CapClaudeChat extension from the ZIP file and pin it to their Chrome
-toolbar easily.
 
 For more details on loading unpacked extensions, refer to the official
 Chrome developer guide at:
@@ -86,3 +84,6 @@ https://developer.chrome.com/docs/extensions/mv3/getstarted/
 ---
 
 > Note: the above instructions also apply to **CaptureOpenAI** it's just in a different folder.
+> Also: **CaptureOpenAI** only works at: https://chatgpt.com/c/
+
+---
