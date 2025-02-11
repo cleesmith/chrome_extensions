@@ -17,6 +17,7 @@ The extensions preserve the natural flow of dialogue by clearly marking messages
 These extensions prioritize security through a carefully restricted design. They operate only on specific, hardcoded URLs:
 
 For CapClaudeChat: https://claude.ai/chat/
+<br>
 For CaptureOpenAI: https://chatgpt.com/c/
 
 This strict URL limitation ensures the extensions only activate where they're needed and can't access other websites. The code is purposefully simple and focused, making it easy to verify exactly what it does. When you inspect the source code, you'll find several specialized components working together:
