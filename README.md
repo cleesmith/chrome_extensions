@@ -2,6 +2,10 @@
 
 These Chrome extensions offer a secure, efficient way to export your conversations with ChatGPT and Claude AI to plain text files. What sets them apart is their completely local operation - all code runs on your computer, downloads happen directly from your browser to your local storage, and no data ever gets sent to external servers or "mothership" systems. Unlike extensions from the Chrome Web Store, which often require broad permissions, communicate with remote servers, and pose potential security risks, these extensions are designed to be lightweight, transparent, and fully self-contained. You install them directly from source code, allowing you to inspect exactly what they do and verify that they operate entirely within your own system.
 
+
+[![About Chrome Extensions](https://img.youtube.com/vi/WV7PE8nFzuk/0.jpg)](https://www.youtube.com/live/WV7PE8nFzuk?si=YhV29P3H9PBzWYVt)
+
+
 ## The Problem These Extensions Solve
 
 If you've spent time working with AI chat interfaces, you're likely familiar with the tedious process of repeatedly clicking Copy buttons and pasting content elsewhere to save your conversations. This repetitive task becomes particularly frustrating during longer chat sessions. I created these extensions to eliminate this hassle, allowing you to capture entire conversations with a single click.
