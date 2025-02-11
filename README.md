@@ -1,121 +1,54 @@
-# chrome_extensions
+# Chrome Extensions for AI Chat Export
 
-## No more clicking all of those Copy buttons then pasting; endlessly repeated
+These Chrome extensions offer a secure, efficient way to export your conversations with ChatGPT and Claude AI to plain text files. What sets them apart is their completely local operation - all code runs on your computer, downloads happen directly from your browser to your local storage, and no data ever gets sent to external servers or "mothership" systems. Unlike extensions from the Chrome Web Store, which often require broad permissions, communicate with remote servers, and pose potential security risks, these extensions are designed to be lightweight, transparent, and fully self-contained. You install them directly from source code, allowing you to inspect exactly what they do and verify that they operate entirely within your own system.
 
-So I coded two Chrome extensions to capture plain text from chat
-sessions with ChatGPT and/or Claude.
+## The Problem These Extensions Solve
 
-The Chrome extensions export ChatGPT or Claude AI chat conversations to plain
-text files. When run, it processes the entire chat page/session and
-creates a downloadable text file containing the full conversation.
+If you've spent time working with AI chat interfaces, you're likely familiar with the tedious process of repeatedly clicking Copy buttons and pasting content elsewhere to save your conversations. This repetitive task becomes particularly frustrating during longer chat sessions. I created these extensions to eliminate this hassle, allowing you to capture entire conversations with a single click.
 
-Key features:<br>
-• The extension preserves the conversation structure and formatting by
-intelligently handling different types of content like paragraphs,
-lists, and spacing. 
+## How These Extensions Work
 
-• It identifies messages from both you and the AI, marks them as 
-"ME:" or "AI" respectively. 
+When you activate one of these extensions, it processes your current chat session and creates a downloadable text file containing the complete conversation. The processing engine intelligently handles various content types and, crucially, removes all Markdown formatting that typically clutters AI chat exports. This Markdown cleanup transforms those annoying asterisks, backticks, and formatting symbols into clean, readable plain text - the way you'd actually want to read it. Both extensions apply this cleanup automatically, so you don't have to manually remove formatting markers or deal with hard-to-read raw Markdown in your exported conversations.
 
-• The extension also captures references to any **Artifact** or **Canvas**
-created during the chat, but **not their contents** because their content is in another window (*perhaps a future enhancement?*).
+The extensions preserve the natural flow of dialogue by clearly marking messages as either "ME:" or "AI:", making conversations easy to follow. While they note the presence of any Artifacts or Canvas elements created during your chat sessions, they currently don't capture the contents of these elements since they exist in separate windows. This might be addressed in a future enhancement, but for now, the focus remains on capturing the main conversation in clean, readable plain text.
 
-• The code includes several specialized functions that work together:
-- A DOM processor that maintains layout and formatting
-- A message extractor that identifies and captures chat content
-- A Markdown cleaner that removes formatting syntax
-- A formatter that structures the conversation into a readable text file
+## Security Through Simplicity and Transparency
 
-This tool is particularly useful for users who want to save, archive,
-or analyze their conversations with ChatGPT/Claude in a clean,
-readable **plain text** format.
+These extensions prioritize security through a carefully restricted design. They operate only on specific, hardcoded URLs:
 
+For CapClaudeChat: https://claude.ai/chat/
+For CaptureOpenAI: https://chatgpt.com/c/
 
-### These extensions only work at these hardcoded URL's:
-1. https://claude.ai/chat/ for **CapClaudeChat** - *see: CapClaudeChat/background.js*
-2. https://chatgpt.com/c/ for **CaptureOpenAI** - *see: CaptureOpenAI/background.js*
+This strict URL limitation ensures the extensions only activate where they're needed and can't access other websites. The code is purposefully simple and focused, making it easy to verify exactly what it does. When you inspect the source code, you'll find several specialized components working together:
 
----
+The DOM processor maintains proper layout and formatting while traversing the chat interface. A dedicated message extractor identifies and captures chat content accurately. The Markdown cleaner removes unnecessary formatting syntax that often makes AI chat exports difficult to read. Finally, the formatter structures everything into a clean, readable text file.
 
-## Below are step‐by‐step instructions for installing **CapClaudeChat**
-Chrome extension using the ZIP file download method (for users
-without Git). This guide also includes steps for pinning the
-extension to the toolbar.
+## Installation Guide
 
+Since these extensions emphasize security through transparency, they aren't distributed through the Chrome Web Store. Instead, you'll install them directly from source code, giving you complete control and visibility over what runs in your browser. Here's how to install them:
 
-### Download and Extract the ZIP File
+### Getting the Extension Files
 
-• Download the ZIP File: 
-- Visit the GitHub repository page at https://github.com/cleesmith/chrome_extensions. 
-- Click the green '**<> Code**' button. 
-- Choose "Download ZIP" - this will download the entire repository as a ZIP file.
+Start by downloading the extension files from GitHub. Visit https://github.com/cleesmith/chrome_extensions and click the green '<> Code' button, then select "Download ZIP". This downloads the entire repository as a ZIP file. After downloading, locate the file in your Downloads folder and extract its contents. Within the extracted folder, you'll find separate folders for each extension - look for "CapClaudeChat" or "CaptureOpenAI" depending on which one you want to install first.
 
-• Extract the ZIP File: 
-- Locate the downloaded ZIP file (typically in your Downloads folder). 
-- Right-click the ZIP file and select "Extract All" (or use your
-  preferred archive tool) to unzip the contents. 
-- Once extracted, navigate into the unzipped folder and locate the
-  CapClaudeChat subfolder. This folder contains the extension files,
-  including the manifest.json file.
+### Setting Up in Chrome
 
----
+Open Google Chrome and navigate to the extensions page by typing chrome://extensions in your address bar. In the top right corner of this page, you'll see a toggle labeled "Developer mode" - turn this on. This enables the ability to load extensions directly from your computer.
 
-### Install the Extension in Chrome
+After enabling Developer mode, click the "Load unpacked" button that appears. Use the file picker window to navigate to and select the extension folder you want to install (either CapClaudeChat or CaptureOpenAI). Select this folder and click "Open" or "Select Folder". Chrome will load the extension and display it on your Extensions page.
 
-• Open the Chrome Extensions Page: 
-- Open Google Chrome. 
-- In the address bar, type: chrome://extensions and press Enter.
+### Making the Extension Easily Accessible
 
-• Enable Developer Mode: 
-- On the Extensions page, locate the toggle labeled "Developer mode"
-  in the top-right corner and switch it On.
+To make the extension readily available, you'll want to pin it to your Chrome toolbar. Look for the puzzle piece icon to the right of your address bar - this opens the Extensions menu. Find your newly installed extension in this menu and click the pin icon next to it. This places the extension's icon directly on your toolbar for easy access.
 
-• Load the Unpacked Extension: 
-- Click the "Load unpacked" button that now appears. 
-- In the file picker window, navigate to and select the CapClaudeChat
-  folder (the folder that contains the extension files, including
-  manifest.json). 
-- Click "Select Folder" (or "Open") to install the extension. 
-- Chrome will load the extension, and you should see it listed on the
-  Extensions page.
+### Final Setup Steps
 
----
+After installation, you can test the extension by visiting the appropriate chat website (either claude.ai/chat or chatgpt.com/c) and clicking the extension's icon. Remember, each extension only works on its specific site. If you make any changes to the extension files, you'll need to return to the Extensions page and click the "Reload" button on the extension's card to apply updates.
 
-### Pin the Extension to the Toolbar
+## Understanding What You've Installed
 
-• Open the Extensions Menu: 
-- Look to the right of the Chrome address bar for the Extensions icon
-  (represented by a puzzle piece). Click it to open the extensions
-  dropdown.
+The transparency of these extensions means you can examine every aspect of their operation. The code is straightforward and well-commented, allowing you to verify exactly what happens when you use them. This approach stands in contrast to many Chrome Web Store extensions where the actual functionality can be obscured or changed without your knowledge.
 
-• Pin the Extension: 
-- In the dropdown list, locate the CapClaudeChat extension. 
-- Click the pin icon (usually a small pushpin) next to the extension
-  name. 
-- Once pinned, the extension’s icon will appear on the toolbar for
-  easy access.
+For more detailed information about working with extensions installed this way, you can refer to Chrome's official developer documentation at https://developer.chrome.com/docs/extensions/mv3/getstarted/
 
----
-
-### Final Notes
-
-• Testing the Extension: 
-- After installation and pinning, click the CapClaudeChat icon on the
-  toolbar to confirm that the extension opens its intended popup.
-  This only works if you're at: https://claude.ai/chat/
-
-• Updating the Extension: 
-- If you make changes to the extension files in the folder, return to
-  the Extensions page(chrome://extensions) and click the "Reload"
-  button on the extension’s card to apply updates.
-
-
-For more details on loading unpacked extensions, refer to the official
-Chrome developer guide at:
-https://developer.chrome.com/docs/extensions/mv3/getstarted/
-
----
-
-> Note: the above instructions also apply to the Chrome extension **CaptureOpenAI** it's just in a different folder.<br>Also: **CaptureOpenAI** only works at: https://chatgpt.com/c/
-
----
+Remember that these installation instructions work the same way for both extensions - they just use different folders and work on different sites. CapClaudeChat is for claude.ai/chat, while CaptureOpenAI handles chatgpt.com/c conversations.

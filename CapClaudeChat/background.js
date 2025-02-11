@@ -97,7 +97,7 @@ chrome.action.onClicked.addListener((tab) => {
 
         // Formats the extracted messages into a single text string.
         function formatConversation(messages) {
-          let chat = 'Chat Export - ' + new Date().toLocaleString() + '\n\n';
+          let chat = 'Claude Chat Export - ' + new Date().toLocaleString() + '\n\n';
           chat += 'Source: ' + window.location.href + '\n\n';
           messages.forEach((msg) => {
             chat += msg.type + ':\n' + msg.content + '\n\n';

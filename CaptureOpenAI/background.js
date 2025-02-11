@@ -91,7 +91,7 @@ chrome.action.onClicked.addListener((tab) => {
 
         // Formats the messages into a single text string for export.
         function formatConversation(messages) {
-          let chat = 'ChatGPT Export - ' + new Date().toLocaleString() + '\n\n';
+          let chat = 'ChatGPT Chat Export - ' + new Date().toLocaleString() + '\n\n';
           chat += 'Source: ' + window.location.href + '\n\n';
           messages.forEach(msg => {
             chat += msg.type + ':\n' + msg.content + '\n\n';
