@@ -21,8 +21,10 @@ For CapClaudeChat: https://claude.ai/chat/
 For CaptureOpenAI: https://chatgpt.com/c/
 
 This strict URL limitation ensures the extensions only activate where they're needed and can't access other websites. The code is purposefully simple and focused, making it easy to verify exactly what it does. When you inspect the source code, you'll find several specialized components working together:
-
-The DOM processor maintains proper layout and formatting while traversing the chat interface. A dedicated message extractor identifies and captures chat content accurately. The Markdown cleaner removes unnecessary formatting syntax that often makes AI chat exports difficult to read. Finally, the formatter structures everything into a clean, readable text file.
+- The DOM processor maintains proper layout and formatting while traversing the chat interface. 
+- A dedicated message extractor identifies and captures chat content accurately. 
+- The Markdown cleaner removes unnecessary formatting syntax that often makes AI chat exports difficult to read. 
+- Finally, the formatter structures everything into a clean, readable text file.
 
 ## Installation Guide
 
