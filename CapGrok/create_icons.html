@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generate Extension Icons</title>
+    <style>
+        .icon-preview {
+            margin: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            display: inline-block;
+        }
+        .download-link {
+            display: block;
+            margin: 5px;
+            color: blue;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Capture Grok Chat Icon Generator</h1>
+    <div id="icons"></div>
+
+    <script>
+        // Function to create an icon of a specific size
+        function createIcon(size) {
+            const canvas = document.createElement('canvas');
+            canvas.width = size;
+            canvas.height = size;
+            const ctx = canvas.getContext('2d');
+            
+            // Draw a simple colored circle with "GX" text
+            ctx.fillStyle = '#000000';
+            ctx.beginPath();
+            ctx.arc(size/2, size/2, size/2, 0, Math.PI * 2);
+            ctx.fill();
+            
+            ctx.fillStyle = 'white';
+            ctx.font = `bold ${size/3}px Arial`;
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText('GX', size/2, size/2);
+            
+            return canvas;
+        }
+
+        // Function to display and create download links for icons
+        function generateIcons() {
+            const sizes = [16, 48, 128];
+            const container = document.getElementById('icons');
+
+            sizes.forEach(size => {
+                // Create a container for each icon
+                const iconContainer = document.createElement('div');
+                iconContainer.className = 'icon-preview';
+
+                // Create and display the icon
+                const canvas = createIcon(size);
+                iconContainer.appendChild(canvas);
+
+                // Add size label
+                const label = document.createElement('p');
+                label.textContent = `${size}x${size} icon`;
+                iconContainer.appendChild(label);
+
+                // Create download link
+                const downloadLink = document.createElement('a');
+                downloadLink.textContent = `Download ${size}x${size} icon`;
+                downloadLink.className = 'download-link';
+                downloadLink.href = canvas.toDataURL('image/png');
+                downloadLink.download = `icon${size}.png`;
+                iconContainer.appendChild(downloadLink);
+
+                container.appendChild(iconContainer);
+            });
+        }
+
+        // Generate icons when page loads
+        window.onload = generateIcons;
+    </script>
+</body>
+</html>
