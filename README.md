@@ -1,6 +1,6 @@
 # Chrome Extensions for AI Chat Export
 
-These Chrome extensions offer a secure, efficient way to export your conversations with ChatGPT and Claude AI to plain text files. What sets them apart is their completely local operation - all code runs on your computer, downloads happen directly from your browser to your local storage, and no data ever gets sent to external servers or "mothership" systems. Unlike extensions from the Chrome Web Store, which often require broad permissions, communicate with remote servers, and pose potential security risks, these extensions are designed to be lightweight, transparent, and fully self-contained. You install them directly from source code, allowing you to inspect exactly what they do and verify that they operate entirely within your own system.
+These Chrome extensions offer a secure, efficient way to export your conversations with ChatGPT, Grok, and Claude AI to plain text files. What sets them apart is their completely local operation - all code runs on your computer, downloads happen directly from your browser to your local storage, and no data ever gets sent to external servers or "mothership" systems. Unlike extensions from the Chrome Web Store, which often require broad permissions, communicate with remote servers, and pose potential security risks, these extensions are designed to be lightweight, transparent, and fully self-contained. You install them directly from source code, allowing you to inspect exactly what they do and verify that they operate entirely within your own system.
 
 
 [![About Chrome Extensions](https://img.youtube.com/vi/WV7PE8nFzuk/0.jpg)](https://www.youtube.com/live/WV7PE8nFzuk?si=YhV29P3H9PBzWYVt)
@@ -23,6 +23,8 @@ These extensions prioritize security through a carefully restricted design. They
 For CapClaudeChat: https://claude.ai/chat/
 <br>
 For CaptureOpenAI: https://chatgpt.com/c/
+<br>
+For CapGrok: https://grok.com/chat/
 
 This strict URL limitation ensures the extensions only activate where they're needed and can't access other websites. The code is purposefully simple and focused, making it easy to verify exactly what it does. When you inspect the source code, you'll find several specialized components working together:
 - The DOM processor maintains proper layout and formatting while traversing the chat interface. 
@@ -58,4 +60,4 @@ The transparency of these extensions means you can examine every aspect of their
 
 For more detailed information about working with extensions installed this way, you can refer to Chrome's official developer documentation at https://developer.chrome.com/docs/extensions/mv3/getstarted/
 
-Remember that these installation instructions work the same way for both extensions - they just use different folders and work on different sites. CapClaudeChat is for claude.ai/chat, while CaptureOpenAI handles chatgpt.com/c conversations.
+Remember that these installation instructions work the same way for all of the capture as text extensions.
