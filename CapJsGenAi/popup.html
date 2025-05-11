@@ -1,0 +1,72 @@
+/**
+ * popup.html - Extension popup UI
+ */
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Content Scraper</title>
+  <style>
+    body {
+      width: 300px;
+      padding: 15px;
+      font-family: Arial, sans-serif;
+    }
+    h2 {
+      margin-top: 0;
+      color: #333;
+    }
+    button {
+      background-color: #4285f4;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-bottom: 10px;
+      width: 100%;
+    }
+    button:hover {
+      background-color: #3367d6;
+    }
+    .selector-input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+    }
+    .status {
+      color: #666;
+      margin-top: 10px;
+      font-style: italic;
+    }
+    .preset-selectors {
+      margin-top: 10px;
+    }
+    .preset-selectors button {
+      background-color: #34a853;
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Content Scraper</h2>
+  <p>Scrape the content area from the current page</p>
+  
+  <input type="text" id="selector" placeholder="CSS Selector (e.g., .col-content)" class="selector-input">
+  
+  <button id="scrapeButton">Scrape Content</button>
+  <button id="copyButton">Copy to Clipboard</button>
+  <button id="downloadButton">Download HTML</button>
+  
+  <div class="preset-selectors">
+    <p><strong>Preset selectors:</strong></p>
+    <button id="googleGenAiSelector">.col-content</button>
+    <button id="mainContentSelector">main</button>
+    <button id="articleSelector">article</button>
+  </div>
+  
+  <div id="status" class="status"></div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
